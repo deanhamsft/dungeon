@@ -6,7 +6,7 @@ class room():
         self.openings = openings
 
     def __str__(self):
-        return "{}\n======\n{}\nThere is an opening on the {} side.\n".format(self.name, self.description, self.openings)
+        return '{}\n======\n{}\nThere is an opening on the {} side.\n'.format(self.name, self.description, self.openings)
 
 
 entry_description = """You look around and see that you are in a dimmly lit room with stone walls.
@@ -25,3 +25,5 @@ Two thick wooden benches are crowded together to your left."""
 entry_room = room("Entry", entry_description, "west")
 hallway = room("Hallway", hallway_description, "East")
 chamber = room("Chamber", chamber_description, "West")
+
+print(entry_room)
