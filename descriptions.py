@@ -9,7 +9,7 @@ On the dirt floor ahead of you, a small glint briefly catches your eye"""
 chamber_description = """As you enter the chamber you see a large round room.
 The walls are smooth stone, with many harnesses and strange metal instruments attached to them.
 On the floor, staw is spread out on the floor farthest from you. 
-Two thick wooden benches are crowded together to your left.
+Two benches are crowded together to your left. One is metal and one is wood
 A disturbing table sits to your right. It's long and looks like it's used for tying people down."""
 
 small_bowl_description = """A small bowl containing a residue that smells faintly of tea."""
@@ -17,14 +17,23 @@ large_bowl_description = """A large bowl containing a liquid that smells like be
 medium_bowl_description = """A medium sized bowl containind a thick liquid that smells like death
 definately something that you wouldn't want to TOUCH"""
 
-rustic_bench_description = """ """
-metal_bench_description = """ """
-restraining_table_description = """ """
+rustic_bench_description = """A large thick wooden bench, with four thick wooden legs. 
+You could put twenty people on it and it looks like it wouldn't
+colapse. The surface is gouged and stained dark in many places.
+A corner seems to have been eatten away by some sort of acid. """
 
-thatched_matt_description = """ """
+metal_bench_description = """A dented a pock marked metal bench. 
+It's stained with what appears to be layers of paint. """
 
-large_knife_description = """ """
-small_knife_description = """ """
+restraining_table_description = """A thick wooden table that has adjustable straps at both ends.
+You shiver at the sight of it, there is a evil feeling to it.
+the center is stained dark black, and scorched in places as though
+it has been burned a number of times. """
+
+thatched_matt_description = """A thick, and dirty matt made of thatch. """
+
+large_knife_description = """A long wide knife, with a round woodin handle. The edge is pitted and chipped """
+small_knife_description = """A small wood handled pairing knife. Thin and clean, this knife is very sharp and looks new """
 
 small_hammer_description = """ """
 small_box_description = """ """

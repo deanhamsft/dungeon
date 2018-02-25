@@ -5,7 +5,7 @@ class workbench(items.item):
         self.contains = contains
         self.contains_str = "This bench contains: \n"
         for item in contains:
-            self.contains_str = self.contains_str + ("\t{}\n".format(item))
+            self.contains_str = self.contains_str + ("\t{}\n".format(item.name))
         super().__init__(name, description, value)
     
     def __str__(self):
