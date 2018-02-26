@@ -1,5 +1,6 @@
-import os
+import os, sys
 import initialize_dungeon
+import help_strings
 
 def inspect_item(room_name, instructions):
     room_of_interest = getattr(initialize_dungeon, room_name)
@@ -48,3 +49,8 @@ while playing:
     elif (instructions[0] == 'look' or instructions[0] == 'inspect' or instructions[0] == 'examine'):
         os.system('cls')
         inspect_item(current_room, instructions)
+    elif instructions[0] == 'quit' or instructions[0] == 'exit':
+        sys.exit(0)
+    elif instructions[0] == 'help':
+        os.system('cls')
+        print(help_strings.help_look)
