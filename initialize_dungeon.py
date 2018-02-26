@@ -28,18 +28,18 @@ small_knife = weapons.weapon('A small knife', descriptions.small_knife_descripti
 small_hammer = weapons.weapon('A small hammer', descriptions.small_hammer_description, 2, 3)
 small_pick = weapons.weapon('A small Pick', descriptions.small_pick_description, 1, 1)
 
-# create the items lists
+# Initialize all the money
 small_box_item_list = [small_emerald, large_diamond, pile_of_gold_coins]
+small_box = workbench.workbench('A small box', descriptions.small_box_description, 3, small_box_item_list)
+
+# create the items lists
 rustic_bench_items_list = [small_bowl, medium_bowl, small_knife, slimey_goo, small_pick]
-metal_bench_items_list = [large_bowl, large_knife, small_hammer, small_box_item_list]
+metal_bench_items_list = [large_bowl, large_knife, small_hammer, small_box]
 
 # Initialize all the workbenches
 rustic_bench = workbench.workbench('Rustic workbench', descriptions.rustic_bench_description, 10, rustic_bench_items_list)
 metal_bench = workbench.workbench('Metal workbench', descriptions.metal_bench_description, 20, metal_bench_items_list)
 restraining_table = workbench.workbench('Restraining table', descriptions.restraining_table_description, 15, [])
-
-# Initialize all the money
-small_box = workbench.workbench('A small box', descriptions.small_box_description, 3, small_box_item_list)
 
 # # Initialize all the rooms
 entry_room = rooms.room('Entry', descriptions.entry_description, ['West'], [thatched_matt])
