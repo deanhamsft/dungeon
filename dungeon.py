@@ -1,5 +1,5 @@
 import os, sys
-import initialize_dungeon
+import initialize_dungeon, items
 import help_strings
 
 def inspect_item(room_name, instructions):
@@ -8,7 +8,15 @@ def inspect_item(room_name, instructions):
     for item in instructions:
         for things in room.contains:
             if things.name.lower().find(item) != -1:
+                current_workbench = things
                 print(things)
+                if hasattr(current_workbench, 'contains'):
+                    print(current_workbench)
+                    for widgets in current_workbench.contains:
+                        if widgets.name.lower().find(item) != -1:
+                            print(widgets)
+
+
     
 
 def parse_instructions(instruction):
@@ -18,6 +26,7 @@ def parse_instructions(instruction):
 playing = True
 os.system('cls')
 current_room = 'entry_room'
+current_workbench = items.item()
 print(initialize_dungeon.entry_room)
 
 while playing:
