@@ -7,7 +7,7 @@ def inspect_item(room_name, instructions):
     room = room_of_interest
     for item in instructions:
         for things in room.contains:
-            if things.name.find(item) != -1:
+            if things.name.lower().find(item) != -1:
                 print(things)
     
 
@@ -22,35 +22,39 @@ print(initialize_dungeon.entry_room)
 
 while playing:
     instruction = input('What would you like to do: \n').lower()
-    instructions = parse_instructions(instruction)
-
-    if (instructions[0] == 'go' or instructions[0] == 'walk' or instructions[0] == 'move'):
-        if (instructions[1] == 'west' and current_room == 'entry_room'):
-            os.system('cls')
-            current_room = 'hallway'
-            print(initialize_dungeon.hallway)
-        if (instructions[1] == 'west' and current_room == 'hallway'):
-            os.system('cls')
-            current_room = 'chamber'
-            print(initialize_dungeon.chamber)
-        if (instructions[1] == 'east' and current_room == 'chamber'):
-            os.system('cls')
-            current_room = 'hallway'
-            print(initialize_dungeon.hallway)
-        if (instructions[1] == 'east' and current_room == 'hallway'):
-            os.system('cls')
-            current_room = 'entry_room'
-            print(initialize_dungeon.entry_room)
-    elif instructions[0] == 'look' and len(instructions) == 1:
-        room_of_interest = getattr(initialize_dungeon, current_room)
-        os.system('cls')
-        room = room_of_interest
-        print(room)
-    elif (instructions[0] == 'look' or instructions[0] == 'inspect' or instructions[0] == 'examine'):
-        os.system('cls')
-        inspect_item(current_room, instructions)
-    elif instructions[0] == 'quit' or instructions[0] == 'exit':
-        sys.exit(0)
-    elif instructions[0] == 'help':
+    if instruction == '':
         os.system('cls')
         print(help_strings.help_look)
+    else:
+        instructions = parse_instructions(instruction)
+
+        if (instructions[0] == 'go' or instructions[0] == 'walk' or instructions[0] == 'move'):
+            if (instructions[1] == 'west' and current_room == 'entry_room'):
+                os.system('cls')
+                current_room = 'hallway'
+                print(initialize_dungeon.hallway)
+            elif (instructions[1] == 'west' and current_room == 'hallway'):
+                os.system('cls')
+                current_room = 'chamber'
+                print(initialize_dungeon.chamber)
+            elif (instructions[1] == 'east' and current_room == 'chamber'):
+                os.system('cls')
+                current_room = 'hallway'
+                print(initialize_dungeon.hallway)
+            elif (instructions[1] == 'east' and current_room == 'hallway'):
+                os.system('cls')
+                current_room = 'entry_room'
+                print(initialize_dungeon.entry_room)
+        elif instructions[0] == 'look' and len(instructions) == 1:
+            room_of_interest = getattr(initialize_dungeon, current_room)
+            os.system('cls')
+            room = room_of_interest
+            print(room)
+        elif (instructions[0] == 'look' or instructions[0] == 'inspect' or instructions[0] == 'examine'):
+            os.system('cls')
+            inspect_item(current_room, instructions)
+        elif instructions[0] == 'quit' or instructions[0] == 'exit':
+            sys.exit(0)
+        elif instructions[0] == 'help':
+            os.system('cls')
+            print(help_strings.help_look)
