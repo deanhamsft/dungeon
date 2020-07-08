@@ -16,9 +16,6 @@ def inspect_item(room_name, instructions):
                         if widgets.name.lower().find(item) != -1:
                             print(widgets)
 
-
-    
-
 def parse_instructions(instruction):
     instructions = instruction.split()
     return instructions

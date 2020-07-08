@@ -22,7 +22,7 @@ You could put twenty people on it and it looks like it wouldn't
 colapse. The surface is gouged and stained dark in many places.
 A corner seems to have been eatten away by some sort of acid. """
 
-metal_bench_description = """A dented a pock marked metal bench. 
+metal_bench_description = """A dented and pock marked metal bench. 
 It's stained with what appears to be layers of paint. """
 
 restraining_table_description = """A thick wooden table that has adjustable straps at both ends.
